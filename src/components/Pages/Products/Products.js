@@ -8,7 +8,7 @@ const Products = () => {
   useEffect(() => {
     const ecomProducts = async () => {
       try {
-        const res = await fetch("http://localhost:4001/products");
+        const res = await fetch("https://ecom-server10.herokuapp.com/products");
         const data = await res.json();
         setProducts(data);
       } catch (err) {
