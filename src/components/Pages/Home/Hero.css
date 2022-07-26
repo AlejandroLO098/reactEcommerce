@@ -1,0 +1,61 @@
+.hero_container {
+  background: url("https://main.d2yy5mx9y8w3zc.amplifyapp.com/img/hero.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero_content {
+  height: calc(100vh - 80px);
+  max-height: 100%;
+
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+.hero_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 120vh;
+  max-height: 100%;
+  padding: 0 2rem;
+  width: 650px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+  .hero_items {
+    width: 100%;
+  }
+}
+
+.hero_h1 {
+  font-size: clamp(2.5rem, 10vw, 3rem);
+  margin-bottom: 1rem;
+  box-shadow: 3px 5px black;
+  letter-spacing: 3px;
+}
+
+.hero_p {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.hero_btn {
+  font-size: 1.4rem;
+  padding: 1rem 4rem;
+  border: none;
+  background: rgb(39, 143, 255);
+  transition: 0.2s ease-out;
+}
+
+.hero_btn:hover {
+  background: rgb(12, 99, 250);
+  color: #fff;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}

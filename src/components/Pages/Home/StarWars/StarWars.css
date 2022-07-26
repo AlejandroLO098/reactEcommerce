@@ -1,0 +1,39 @@
+.feature_container {
+  background: url("https://wallpaperboat.com/wp-content/uploads/2021/08/31/78310/star-wars-07.jpg");
+  height: 100vh;
+  max-height: 500px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.feature_container h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.feature_container p {
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.feature_button {
+  font-size: 1.4rem;
+  padding: 0.6rem 3rem;
+  border: none;
+  background: #ffc500;
+  color: #000;
+  transition: 0.2s ease-out;
+}
+
+.feature_button:hover {
+  color: #fff;
+  background: rgb(16, 21, 34);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
