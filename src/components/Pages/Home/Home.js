@@ -3,13 +3,15 @@ import Hero from "./Hero";
 import Upcoming from "./Upcoming";
 import { productData } from "./data";
 import StarWars from "./StarWars/StarWars";
+import Carasoul from "./Carasoul/Carasoul";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <Upcoming heading="COMING SOON!" data={productData} />
+      <Carasoul />
       <StarWars />
+      <Upcoming heading="COMING SOON!" data={productData} />
     </div>
   );
 };
