@@ -4,26 +4,32 @@ import "./Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [filter, filterProducts] = useState();
+  const ecomProducts = async () => {
+    try {
+      const res = await fetch("https://ecom-server10.herokuapp.com/products");
+      const data = await res.json();
+      setProducts(data);
+      filterProducts(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    const ecomProducts = async () => {
-      try {
-        const res = await fetch("https://ecom-server10.herokuapp.com/products");
-        const data = await res.json();
-        setProducts(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     ecomProducts();
   }, []);
 
   const filterItem = (categoryItem) => {
-    const updatedItems = products.filter((i) => {
-      return i.category === categoryItem;
-    });
-
-    setProducts(updatedItems);
+    // ecomProducts();
+    if (products !== filter) {
+      return ecomProducts();
+    } else {
+      const updatedItems = products.filter((i) => {
+        return i.category === categoryItem;
+      });
+      setProducts(updatedItems);
+    }
   };
 
   return (
